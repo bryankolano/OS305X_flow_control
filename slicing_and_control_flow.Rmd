@@ -1,0 +1,48 @@
+---
+title: "Slicing Data and Control Flow"
+author: "Bryan Kolano"
+date: "7/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# This is our semi-spontaneous class on how to subset/ slice data and how to control our flow of data aka flow control.
+
+### First we will start off with slicing data.  We know we can pull particular columns of data by using the dplyr verb "select", however, there are other ways when you cannot use select.  But first, let's call in our package and data.
+
+```{r packages_data}
+
+library(tidyverse)
+
+df <- mtcars
+```
+
+
+ When using slice notation in R, to pull rows and columns, it is in the form
+ df[row,column]
+ 
+1. If we only want to pull a column, there we can use a few methods:
+df$columnname
+ 
+2. In the example below, we still need to tell R what rows to pull.  If you want to pull them all, then put nothing in front of the comma.
+ df[,columnname]
+
+3.If you want to pull multiple columns, we feed the column names in as a vector c().
+df[,c(col1,col2,col5)]
+
+```{r select_columns}
+
+# Use $ to chose a particular column
+df$mpg
+
+#Use bracket notation to select one column 
+df[,'mpg']
+
+#bracket notation to pull multiple columns
+df[,c('hp','mpg','cyl')]
+
+```
+
