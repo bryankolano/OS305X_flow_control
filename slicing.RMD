@@ -1,5 +1,5 @@
 ---
-title: "Slicing Datain R"
+title: "Slicing Data in R"
 author: "Bryan Kolano"
 date: "7/15/2021"
 output: html_document
